@@ -1,9 +1,14 @@
 # NFT Public Mint Sniper
 
-Công cụ CLI mint NFT public qua SeaDrop trên Ethereum, Base và Robinhood Chain.
-Giao dịch được tạo từ dữ liệu on-chain và ký sẵn để gửi đúng thời điểm mở mint.
+- Source tham khảo từ: [morsyxbt](https://github.com/morsyxbt/nft-public-mint)
+- Công cụ CLI mint NFT public qua SeaDrop trên Ethereum, Base và Robinhood Chain.
+- Giao dịch được tạo từ dữ liệu on-chain và ký sẵn để gửi đúng thời điểm mở mint.
 
 > Chỉ nên dùng ví phụ và nạp đúng số tiền dự định mint.
+
+## Video hướng dẫn
+
+- Xem hướng dẫn chi tiết: [Video trên X / Twitter](https://x.com/solotop999/status/2089201813983732190?s=20)
 
 ## Cài đặt và chạy
 
