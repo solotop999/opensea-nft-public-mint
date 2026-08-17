@@ -37,4 +37,5 @@ if [ ! -e .env ]; then
     cp .env.example .env
     echo "Created .env from .env.example (optional settings only)."
 fi
-echo "Installation complete. Run: npm start"
+echo "Cài đặt hoàn tất. Đang khởi động chương trình..."
+npm start
