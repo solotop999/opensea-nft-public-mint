@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.log
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Private keys — never commit
+wallets/
+keys.txt
+*.key
