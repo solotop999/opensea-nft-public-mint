@@ -7,13 +7,14 @@ Giao dịch được tạo từ dữ liệu on-chain và ký sẵn để gửi �
 
 ## Cài đặt và chạy
 
-Yêu cầu: có [Git](https://git-scm.com/downloads) và kết nối Internet. Script sẽ
-tự cài Node.js nếu cần, cài dependency, build, tạo `.env` và chạy chương trình.
+Yêu cầu: tự cài đặt [Git](https://git-scm.com/downloads).
 
-### Windows PowerShell
+Script sẽ tự cài Node.js nếu cần, cài dependency, build, tạo `.env` và chạy chương trình.
 
-```powershell
-git clone https://github.com/solotop999/opensea-nft-public-mint.git; if ($LASTEXITCODE -eq 0) { Set-Location opensea-nft-public-mint; powershell -ExecutionPolicy Bypass -File .\install.ps1 }
+### Windows CMD
+
+```cmd
+git clone https://github.com/solotop999/opensea-nft-public-mint.git && cd opensea-nft-public-mint && install.cmd
 ```
 
 ### Linux
