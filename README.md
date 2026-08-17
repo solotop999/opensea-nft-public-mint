@@ -30,6 +30,11 @@ git clone https://github.com/solotop999/opensea-nft-public-mint.git && cd opense
 git clone https://github.com/solotop999/opensea-nft-public-mint.git && cd opensea-nft-public-mint && chmod +x install.sh && ./install.sh
 ```
 
+## Link opensea test mint
+- Link để test, hết hạn 08/2027
+- Robinhood Chain
+- https://opensea.io/collection/tadaaaaaa/overview
+  
 ## Những lần chạy sau
 
 ```bash
