@@ -37,5 +37,22 @@ if [ ! -e .env ]; then
     cp .env.example .env
     echo "Created .env from .env.example (optional settings only)."
 fi
+
+if grep -q '^OPENSEA_API_KEY=[[:space:]]*$' .env; then
+    echo "Requesting a free OpenSea API key..."
+    open_sea_key=$(
+        curl -fsS -X POST https://api.opensea.io/api/v2/auth/keys 2>/dev/null |
+        node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{process.stdout.write(JSON.parse(s).api_key||"")}catch{}})'
+    ) || open_sea_key=""
+
+    if [ -n "$open_sea_key" ]; then
+        escaped_key=$(printf '%s' "$open_sea_key" | sed 's/[&|]/\\&/g')
+        sed -i "s|^OPENSEA_API_KEY=[[:space:]]*$|OPENSEA_API_KEY=$escaped_key|" .env
+        echo "OpenSea API key saved to .env (key hidden)."
+    else
+        echo "Could not create an OpenSea API key. Paste your existing key into OPENSEA_API_KEY in .env."
+    fi
+fi
+
 echo "Cài đặt hoàn tất. Đang khởi động chương trình..."
 npm start

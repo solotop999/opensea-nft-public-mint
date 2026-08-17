@@ -9,7 +9,8 @@ Giao dịch được tạo từ dữ liệu on-chain và ký sẵn để gửi �
 
 Yêu cầu: tự cài đặt [Git](https://git-scm.com/downloads).
 
-Script sẽ tự cài Node.js nếu cần, cài dependency, build, tạo `.env` và chạy chương trình.
+Script sẽ tự cài Node.js nếu cần, cài dependency, build, tạo `.env`, thử lấy
+OpenSea API key miễn phí rồi chạy chương trình.
 
 ### Cài đặt cho Windows
 - Mở cmd lên và nhập:
@@ -51,6 +52,9 @@ Bạn cũng có thể dán URL RPC hoặc Alchemy key trực tiếp khi chương
 
 ### OpenSea API key (chỉ khi dùng slug/link bộ sưu tập)
 
+Installer tự thử tạo và lưu key vào `.env` trong lần chạy đầu. Nếu OpenSea báo
+giới hạn tạo key, hãy dùng key hiện có hoặc làm thủ công như dưới đây.
+
 Cách nhanh nhất để lấy key miễn phí:
 
 ```bash
@@ -63,8 +67,9 @@ Sao chép giá trị `api_key` trong kết quả rồi điền vào `.env`:
 OPENSEA_API_KEY=KEY_VỪA_SAO_CHÉP
 ```
 
-Key miễn phí hiện có thời hạn 30 ngày. Muốn tạo key lâu dài/hạn mức cao hơn,
-đăng nhập OpenSea rồi vào **Settings → Developer → Get access → Create key**.
+Key miễn phí có thời hạn ghi trong trường `expires_at` của kết quả. Khi hết hạn,
+tạo key mới và thay giá trị `OPENSEA_API_KEY` trong `.env`. Muốn dùng hạn mức
+cao hơn, đăng nhập OpenSea rồi vào **Settings → Developer → Get access → Create key**.
 
 API key chỉ dùng để đổi slug thành địa chỉ contract. Nếu không muốn lấy key,
 hãy dán trực tiếp địa chỉ contract `0x...`; quá trình mint không cần OpenSea API.
