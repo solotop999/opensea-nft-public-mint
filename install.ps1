@@ -31,6 +31,5 @@ if (-not (Test-Path -LiteralPath ".env")) {
     Copy-Item -LiteralPath ".env.example" -Destination ".env"
     Write-Host "Created .env from .env.example (optional settings only)." -ForegroundColor Yellow
 }
-Write-Host "Cài đặt hoàn tất. Đang khởi động chương trình..." -ForegroundColor Green
-npm start
-if ($LASTEXITCODE -ne 0) { throw "Không thể khởi động chương trình (mã lỗi $LASTEXITCODE)." }
+Write-Host "Installation complete. Starting the application..." -ForegroundColor Green
+npm.cmd start
