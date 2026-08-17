@@ -11,13 +11,14 @@ Yêu cầu: tự cài đặt [Git](https://git-scm.com/downloads).
 
 Script sẽ tự cài Node.js nếu cần, cài dependency, build, tạo `.env` và chạy chương trình.
 
-### Windows CMD
+### Cài đặt cho Windows
+- Mở cmd lên và nhập:
 
 ```cmd
 git clone https://github.com/solotop999/opensea-nft-public-mint.git && cd opensea-nft-public-mint && install.cmd
 ```
 
-### Linux
+### Cài đặt cho Linux
 
 ```bash
 git clone https://github.com/solotop999/opensea-nft-public-mint.git && cd opensea-nft-public-mint && chmod +x install.sh && ./install.sh
